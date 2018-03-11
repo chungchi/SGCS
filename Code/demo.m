@@ -31,6 +31,9 @@ map.names = {'_CA.png','_SF.png','_RBD.png','_Cor.png','_CoC.png'};
 map.num = length(map.names);
 maxIter = 8;
 
+addpath(genpath('cvx-64')); cvx_setup;
+addpath(genpath('Eval')); 
+
 % Parameter settings for co-segmetnation
 addpath(genpath('./coseg_superpixel')); % add function path
 NumBClusters = 5; % number of background clusters for bkg GMM
